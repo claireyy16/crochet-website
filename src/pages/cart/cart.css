@@ -9,21 +9,14 @@
     display: grid;
     align-items: center;
     justify-content: center;
+    width: 700px;
+    height: 200px;
 
 }
 
 .prodName, .prodDesc, .prodPrice {
     padding: 2px;
     margin: 2px;
-}
-
-.addtocart{
-    transition-duration: 0.2s;
-}
-
-.addtocart:hover{
-    color: white;
-    background-color: grey;
 }
 
 .product img {

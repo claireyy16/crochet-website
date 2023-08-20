@@ -20,7 +20,7 @@ export const Cart = () => {
             return <CartItem id={product.id} 
             productName={product.productName} price={product.price} productImage={product.productImage}/>
           }
-        })};
+        })}
       </div>
       </div>
     </div>

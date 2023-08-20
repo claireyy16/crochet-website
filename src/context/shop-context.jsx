@@ -26,7 +26,11 @@ export const ShopContextProvider = (props) => {
 			//removing one more value from the item id
 		};
 
-		const contextValue = {cartItems, addToCart, removeFromCart}
+		const updateCartItemCount = (newAmount, itemID) => {
+			setCartItems((prev) => ({...prev, [itemID] : newAmount}));
+		};
+
+		const contextValue = {cartItems, addToCart, removeFromCart, updateCartItemCount}
 		//object to pass in functions and values to access
 
 	return <ShopContext.Provider value={contextValue}>{props.children}</ShopContext.Provider>;
