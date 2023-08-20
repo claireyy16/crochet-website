@@ -4,6 +4,7 @@ import { ShopContext } from "../../context/shop-context";
 import { CartItem } from './cart-item';
 import "./cart.css";
 
+
 export const Cart = () => {
   const { cartItems } = useContext(ShopContext);
 
