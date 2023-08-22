@@ -90,6 +90,7 @@
     }
 
     .prodDesc, .prodPrice {
+        font-size: 16px;
     }
 
     .addtocart {

@@ -2,18 +2,23 @@ import React, { useContext } from 'react'
 import { PRODUCTS } from "../../products";
 import { ShopContext } from "../../context/shop-context";
 import { CartItem } from './cart-item';
-import "./cart.css";
+import styles from "./cart.css";
+
+import { useNavigate } from 'react-router';
 
 
 export const Cart = () => {
-  const { cartItems } = useContext(ShopContext);
+  const { cartItems, getTotalCartAmount } = useContext(ShopContext);
+  const totalAmount = getTotalCartAmount(); 
+
+  const navigate = useNavigate();
 
   return (
     <div className='cart'>
       <div>
         <h1 className='title'>cart</h1>
       </div>
-      <div className='products'>
+      <div className='cart'>
       <div className='cartItems'>
         {PRODUCTS.map((product) => {
           if (cartItems[product.id] !== 0) {
@@ -23,6 +28,14 @@ export const Cart = () => {
         })}
       </div>
       </div>
+      
+    { totalAmount > 0 ? 
+      <div className='checkout'>
+        <p>subtotal: ${totalAmount}</p>
+        <button onClick={() => navigate("/shop")}> continue shopping </button>
+        <button> checkout </button>
+      </div>
+    : <h1> start shopping! </h1>}
     </div>
   )
 }
