@@ -28,7 +28,7 @@ export const Cart = () => {
         })}
       </div>
       </div>
-      
+    {/* changes message based on if cart is empty */}
     { totalAmount > 0 ? 
       <div className='checkout'>
         <p>subtotal: ${totalAmount}</p>
