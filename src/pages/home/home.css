@@ -1,8 +1,18 @@
 .textIntro {
     line-height: 30px;
-    
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 100px 150px 200px 200px;
+    width: 1000px;
 }
 
-.classList {
+.meList {
     list-style-position: inside;
+    grid-row-start: 1;
+    grid-row-end: 1;
+}
+
+.about {
+    grid-row-start: 2;
+    grid-row-end: 2;
 }
