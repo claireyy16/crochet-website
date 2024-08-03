@@ -29,7 +29,7 @@ export const Navbar = () => {
             <Link className="navLink" id="shopLink" to="/shop">shop</Link>
             <Link className="navLink" id="flowerLink" to="/flowers">flowers</Link>
             <Link className="navLink" id="cartLink" to="/cart">
-                <ShoppingCart></ShoppingCart> ({totalItems})
+                <ShoppingCart id="cartIcon"></ShoppingCart> ({totalItems}) 
             </Link>
             </div>
         </div>
