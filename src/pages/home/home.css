@@ -1,9 +1,13 @@
 .textIntro {
     line-height: 30px;
     display: grid;
-    grid-template-columns: 2fr 1fr;
+    grid-template-columns: 50vw 50vw;
     grid-template-rows: 100px 150px 200px 200px;
-    width: 1000px;
+    width: 100vw;
+}
+
+.topText {
+    text-align: center;
 }
 
 .meList {
@@ -13,6 +17,8 @@
 }
 
 .about {
-    grid-row-start: 2;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 1;
     grid-row-end: 2;
 }
