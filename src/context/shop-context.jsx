@@ -15,28 +15,37 @@ const getDefaultCart = () => {
 export const ShopContextProvider = (props) => {
 	const [cartItems, setCartItems] = useState(getDefaultCart());
 	console.log(cartItems);
+	
 
 	const getTotalCartAmount = () => {
 		let totalAmount = 0;
 		for (const item in cartItems) {
-			{
-				/*loop through items in cartItems*/
-			}
+			/*loop through items in cartItems*/
 			if (cartItems[item] > 0) {
-				{
-					/*if there is one of that item in cart*/
-				}
+				/*if there is one of that item in cart*/
 				let itemInfo = PRODUCTS.find((product) => product.id === Number(item));
-				{
-					/* get the id of that product and convert to a number */
-				}
+				/* get the id of that product and convert to a number */
 				totalAmount += cartItems[item] * itemInfo.price;
 			}
 		}
-		console.log(totalAmount);
-
 		return totalAmount;
 	};
+
+
+	const getTotalItems = () => {
+		let totalItems = 0;
+		for (const item in cartItems) {
+			/*loop through items in cartItems*/
+			if (cartItems[item] > 0) {
+				{}
+
+				totalItems += cartItems[item];
+				{}
+			}
+		}
+		return totalItems;
+	};
+
 
 	const addToCart = (itemID) => {
 		setCartItems((prev) => ({ ...prev, [itemID]: prev[itemID] + 1 }));
@@ -58,6 +67,7 @@ export const ShopContextProvider = (props) => {
 		removeFromCart,
 		updateCartItemCount,
 		getTotalCartAmount,
+		getTotalItems,
 	};
 	//object to pass in functions and values to access
 

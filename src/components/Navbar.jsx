@@ -5,6 +5,8 @@ import { Link } from "react-router-dom";
 import { ShoppingCart } from "phosphor-react";
 import { ShopContextProvider } from '../context/shop-context';
 import { useState, useContext } from 'react';
+import { ShopContext } from "../context/shop-context";
+import { CartItem } from '../pages/cart/cart-item';
 //import { House } from "phosphor-react";
 import "./navbar.css"
 import "../App.css"
@@ -12,10 +14,11 @@ import "../App.css"
 export const Navbar = () => {
 
     const cart = useContext(ShopContextProvider);
+    const { getTotalItems } = useContext(ShopContext);
+    const totalItems = getTotalItems();
 
     //add useState for menu toggle
 
-    
 
     return (
         <div className="navbar">
@@ -26,7 +29,7 @@ export const Navbar = () => {
             <Link className="navLink" id="shopLink" to="/shop">shop</Link>
             <Link className="navLink" id="flowerLink" to="/flowers">flowers</Link>
             <Link className="navLink" id="cartLink" to="/cart">
-                <ShoppingCart></ShoppingCart> 0
+                <ShoppingCart></ShoppingCart> ({totalItems})
             </Link>
             </div>
         </div>
