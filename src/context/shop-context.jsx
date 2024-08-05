@@ -1,5 +1,5 @@
 import React, { createContext, useState } from "react";
-import { PRODUCTS, getProductData } from "../products";
+import { PRODUCTS } from "../products";
 
 export const ShopContext = createContext(null);
 //create somewhere to keep track of states that need to be accessed everywhere
@@ -37,10 +37,7 @@ export const ShopContextProvider = (props) => {
 		for (const item in cartItems) {
 			/*loop through items in cartItems*/
 			if (cartItems[item] > 0) {
-				{}
-
 				totalItems += cartItems[item];
-				{}
 			}
 		}
 		return totalItems;

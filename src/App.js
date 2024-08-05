@@ -1,7 +1,6 @@
 import "./App.css";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { Navbar } from "./components/Navbar";
-import { Logo } from "./components/logo";
 import { Home } from "./pages/home/home";
 import { Shop } from "./pages/shop/shop";
 import { Flowers } from "./pages/flowers/flowers";
@@ -11,6 +10,7 @@ import { cancel } from "./pages/cancel";
 import { ShopContextProvider } from "./context/shop-context";
 
 function App() {
+
   return (
     <div className="App">
       <ShopContextProvider>
