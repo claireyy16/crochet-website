@@ -2,7 +2,7 @@ import test from './assets/test.jpg'
 
 const PRODUCTS = [
     {
-        id: 1,
+        id: "prod_Qakqp0zvQDGXI2",
         token: "prod_Qakqp0zvQDGXI2",
         productName: "1",
         price: 1.00,
