@@ -12,6 +12,7 @@ import { ShopContextProvider } from "./context/shop-context";
 function App() {
 
   return (
+    //test
     <div className="App">
       <ShopContextProvider>
       <Router>
