@@ -25,3 +25,6 @@ yarn-error.log*
 ids.txt
 server.js
 products.js
+
+# keys
+.env

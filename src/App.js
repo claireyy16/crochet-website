@@ -8,6 +8,9 @@ import { Cart } from "./pages/cart/cart";
 import { success } from "./pages/success";
 import { cancel } from "./pages/cancel";
 import { ShopContextProvider } from "./context/shop-context";
+require('dotenv').config();
+
+const apiKey = process.env.STRIPE_KEY;
 
 function App() {
 
